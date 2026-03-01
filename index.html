@@ -3,203 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodeCraft Studio</title>
-  <style>
-    :root {
-      --bg-top: #f4f8ff;
-      --bg-bottom: #e8f6ef;
-      --ink: #17202a;
-      --muted: #5f6b76;
-      --accent: #0f766e;
-      --accent-2: #b45309;
-      --card: rgba(255, 255, 255, 0.86);
-      --shadow: 0 14px 32px rgba(17, 24, 39, 0.12);
-      --radius: 16px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Avenir Next", "Segoe UI", sans-serif;
-      color: var(--ink);
-      background: linear-gradient(160deg, var(--bg-top), var(--bg-bottom));
-      min-height: 100vh;
-      line-height: 1.5;
-    }
-
-    .wrap {
-      width: min(980px, 92%);
-      margin: 0 auto;
-      padding: 48px 0 64px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-
-    .brand {
-      font-size: clamp(1.2rem, 2vw, 1.6rem);
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    nav a {
-      color: var(--ink);
-      text-decoration: none;
-      margin-left: 18px;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: var(--accent);
-    }
-
-    .hero,
-    .card {
-      background: var(--card);
-      backdrop-filter: blur(6px);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px;
-    }
-
-    .hero h1 {
-      margin-top: 0;
-      font-size: clamp(1.9rem, 5vw, 3rem);
-      line-height: 1.1;
-    }
-
-    .hero p {
-      margin: 14px 0 22px;
-      color: var(--muted);
-      font-size: 1.03rem;
-      max-width: 65ch;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      border: 0;
-      border-radius: 999px;
-      font-weight: 700;
-      padding: 11px 18px;
-      cursor: pointer;
-      font-size: 0.95rem;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .btn-secondary {
-      background: #fff;
-      color: var(--accent-2);
-      border: 2px solid #f59e0b40;
-    }
-
-    .grid {
-      margin-top: 24px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .status {
-      margin-top: 28px;
-      padding: 14px 16px;
-      border-radius: 12px;
-      background: #ffffffb8;
-      border: 1px solid #d2e3dc;
-      color: #134e4a;
-      font-weight: 600;
-    }
-
-    footer {
-      margin-top: 32px;
-      color: #425466;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-  </style>
+  <title>Alyssa Maxon | Personal Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div class="brand">CodeCraft Studio</div>
+    <header class="reveal">
+      <div class="brand">Alyssa Maxon</div>
       <nav>
-        <a href="#build">Build</a>
-        <a href="#learn">Learn</a>
-        <a href="#launch">Launch</a>
+        <a href="#about">About</a>
+        <a href="#music">Music</a>
+        <a href="#campus">CUA</a>
+        <a href="#status">Status</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
-        <h1>Build your website from this starter file</h1>
+      <section class="hero reveal reveal-delay-1">
+        <h1>Hi, I am Alyssa Maxon.</h1>
         <p>
-          This `index.html` is ready for custom sections, CSS styling, and JavaScript features.
-          Edit the content, colors, and layout to match your project.
+          I am a freshman at CUA studying Politics and Pre-Law. This site shares
+          what I enjoy and what I am focused on in school.
         </p>
         <div class="buttons">
-          <button class="btn btn-primary" id="start-btn">Start Coding</button>
-          <button class="btn btn-secondary">View Structure</button>
+          <button class="btn btn-primary" id="start-btn">Say Hello</button>
+          <a class="btn-link" href="#about">Learn More</a>
         </div>
       </section>
 
-      <section class="grid">
-        <article class="card" id="build">
-          <h3>1. Build</h3>
-          <p>Create your sections: hero, about, projects, and contact.</p>
+      <section class="grid reveal reveal-delay-2">
+        <article class="card" id="about">
+          <div class="step">01</div>
+          <h3>About Me</h3>
+          <p>My name is Alyssa Maxon, and I love skateboarding, singing, and hiking.</p>
         </article>
-        <article class="card" id="learn">
-          <h3>2. Learn</h3>
-          <p>Practice HTML semantics, CSS layout, and responsive design.</p>
+        <article class="card" id="music">
+          <div class="step">02</div>
+          <h3>Music</h3>
+          <p>I play the saxophone and bass guitar.</p>
         </article>
-        <article class="card" id="launch">
-          <h3>3. Launch</h3>
-          <p>Publish to GitHub Pages, Netlify, or another static host.</p>
+        <article class="card" id="campus">
+          <div class="step">03</div>
+          <h3>CUA</h3>
+          <p>I attend CUA as a freshman and study Politics and Pre-Law.</p>
         </article>
       </section>
 
-      <div class="status" id="status">Status: Ready to create your site.</div>
+      <section class="section reveal reveal-delay-3">
+        <h2>Interests and Goals</h2>
+        <p>These are the activities and studies that define my current journey.</p>
+        <ol class="checklist">
+          <li>Music: Saxophone and bass guitar.</li>
+          <li>Hobbies: Skateboarding, singing, and hiking.</li>
+          <li>Academics: Politics and Pre-Law at CUA.</li>
+        </ol>
+      </section>
+
+      <div class="status reveal reveal-delay-3" id="status">Status: Welcome to Alyssa's website.</div>
     </main>
 
-    <footer>
-      Edit this file at <code>index.html</code> to start your website project.
-    </footer>
+    <footer class="reveal reveal-delay-3">Thanks for visiting Alyssa Maxon's personal website.</footer>
   </div>
 
-  <script>
-    const startBtn = document.getElementById("start-btn");
-    const status = document.getElementById("status");
-
-    startBtn.addEventListener("click", () => {
-      status.textContent = "Status: Nice. Your starter page is active and ready for edits.";
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
