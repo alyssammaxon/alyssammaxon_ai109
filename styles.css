@@ -216,21 +216,28 @@ footer {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  animation: rise 600ms ease forwards;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.reveal-delay-1 {
-  animation-delay: 110ms;
-}
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: rise 600ms ease forwards;
+  }
 
-.reveal-delay-2 {
-  animation-delay: 200ms;
-}
+  .reveal-delay-1 {
+    animation-delay: 110ms;
+  }
 
-.reveal-delay-3 {
-  animation-delay: 290ms;
+  .reveal-delay-2 {
+    animation-delay: 200ms;
+  }
+
+  .reveal-delay-3 {
+    animation-delay: 290ms;
+  }
 }
 
 @keyframes rise {
