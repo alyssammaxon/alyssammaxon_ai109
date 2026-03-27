@@ -14,8 +14,8 @@
         <a href="#about">About</a>
         <a href="#music">Music</a>
         <a href="#campus">CUA</a>
+        <a href="#simon-game">Simon Game</a>
         <a href="#status">Status</a>
-        <a href="simon.html">Simon Game</a>
       </nav>
     </header>
 
@@ -29,7 +29,7 @@
         <div class="buttons">
           <button class="btn btn-primary" id="start-btn">Say Hello</button>
           <a class="btn-link" href="#about">Learn More</a>
-          <a class="btn-link" href="simon.html">Play Simon</a>
+          <a class="btn-link" href="#simon-game">Play Simon</a>
         </div>
       </section>
 
@@ -59,6 +59,46 @@
           <li>Hobbies: Skateboarding, singing, and hiking.</li>
           <li>Academics: Politics and Pre-Law at CUA.</li>
         </ol>
+      </section>
+
+      <section class="section reveal reveal-delay-3 simon-layout" id="simon-game">
+        <div class="simon-board-wrap">
+          <div class="simon-board" aria-label="Simon game board">
+            <button class="pad pad-green" data-color="green" aria-label="Green"></button>
+            <button class="pad pad-red" data-color="red" aria-label="Red"></button>
+            <button class="pad pad-yellow" data-color="yellow" aria-label="Yellow"></button>
+            <button class="pad pad-blue" data-color="blue" aria-label="Blue"></button>
+            <div class="simon-center">
+              <div class="simon-title">SIMON</div>
+              <div class="simon-round">Round <span id="round-display">0</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="simon-panel">
+          <h2>Simon Memory Challenge</h2>
+          <p>
+            Watch the flashing sequence, then click the colors back in the same
+            order. Each round adds one more step.
+          </p>
+          <div class="simon-stats">
+            <div class="stat-card">
+              <span class="stat-label">Current Round</span>
+              <strong id="round-card">0</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Best Round</span>
+              <strong id="best-score">0</strong>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-primary" id="simon-start-btn">Start Game</button>
+            <button class="btn-link" id="simon-restart-btn">Restart</button>
+          </div>
+          <div class="status simon-status" id="simon-status" aria-live="polite">
+            Status: Press Start Game to begin.
+          </div>
+        </div>
       </section>
 
       <div class="status reveal reveal-delay-3" id="status">Status: Welcome to Alyssa's website.</div>
