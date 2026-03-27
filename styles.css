@@ -402,6 +402,13 @@ nav a:hover {
   margin-top: 18px;
 }
 
+.game-link-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
 footer {
   margin-top: 28px;
   color: #3f5367;
@@ -461,6 +468,11 @@ footer {
   .simon-layout {
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+
+  .game-link-panel {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .simon-board {
