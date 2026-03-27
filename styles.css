@@ -26,12 +26,50 @@ body {
     linear-gradient(150deg, var(--bg-a), var(--bg-b));
   min-height: 100vh;
   line-height: 1.5;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 12% 18%, transparent 0 36px, rgba(72, 21, 83, 0.34) 37px 40px, transparent 41px),
+    radial-gradient(circle at 12% 18%, transparent 0 62px, rgba(72, 21, 83, 0.22) 63px 66px, transparent 67px),
+    radial-gradient(circle at 86% 72%, transparent 0 34px, rgba(72, 21, 83, 0.3) 35px 38px, transparent 39px),
+    radial-gradient(circle at 86% 72%, transparent 0 58px, rgba(72, 21, 83, 0.2) 59px 62px, transparent 63px),
+    radial-gradient(circle at 74% 22%, transparent 0 24px, rgba(72, 21, 83, 0.24) 25px 28px, transparent 29px),
+    radial-gradient(circle at 74% 22%, transparent 0 42px, rgba(72, 21, 83, 0.16) 43px 46px, transparent 47px);
+  opacity: 0.95;
+  z-index: 0;
+}
+
+body::after {
+  background:
+    radial-gradient(ellipse at center, rgba(162, 119, 220, 0.8) 0 42%, transparent 43%) 9% 27% / 30px 18px no-repeat,
+    radial-gradient(ellipse at center, rgba(162, 119, 220, 0.8) 0 42%, transparent 43%) 11.6% 27% / 30px 18px no-repeat,
+    radial-gradient(ellipse at center, rgba(179, 137, 230, 0.82) 0 42%, transparent 43%) 82% 17% / 28px 16px no-repeat,
+    radial-gradient(ellipse at center, rgba(179, 137, 230, 0.82) 0 42%, transparent 43%) 84.4% 17% / 28px 16px no-repeat,
+    radial-gradient(ellipse at center, rgba(167, 122, 224, 0.8) 0 42%, transparent 43%) 78% 80% / 34px 20px no-repeat,
+    radial-gradient(ellipse at center, rgba(167, 122, 224, 0.8) 0 42%, transparent 43%) 80.8% 80% / 34px 20px no-repeat,
+    radial-gradient(circle at center, rgba(83, 27, 109, 0.55) 0 2px, transparent 3px) 10.3% 27.3% / 40px 24px no-repeat,
+    radial-gradient(circle at center, rgba(83, 27, 109, 0.55) 0 2px, transparent 3px) 83.1% 17.2% / 38px 22px no-repeat,
+    radial-gradient(circle at center, rgba(83, 27, 109, 0.55) 0 2px, transparent 3px) 79.2% 80.2% / 44px 26px no-repeat;
+  z-index: 0;
 }
 
 .wrap {
   width: min(1060px, 92%);
   margin: 0 auto;
   padding: 40px 0 70px;
+  position: relative;
+  z-index: 1;
 }
 
 header {
@@ -245,11 +283,11 @@ nav a:hover {
   grid-template-columns: minmax(280px, 430px) minmax(240px, 1fr);
   gap: 28px;
   align-items: center;
-  border: 2px solid #c7dff8;
+  border: 2px solid #ceb7ec;
   background:
-    linear-gradient(135deg, rgba(232, 244, 255, 0.96), rgba(255, 255, 255, 0.9)),
-    #ffffff;
-  box-shadow: 0 16px 34px rgba(29, 79, 145, 0.16);
+    linear-gradient(135deg, rgba(232, 218, 248, 0.96), rgba(246, 238, 255, 0.93)),
+    #f2e8ff;
+  box-shadow: 0 16px 34px rgba(102, 63, 145, 0.16);
 }
 
 .simon-section-header {
@@ -262,9 +300,9 @@ nav a:hover {
   align-items: center;
   padding: 7px 12px;
   border-radius: 999px;
-  background: #e8f4ff;
-  border: 1px solid #c7dff8;
-  color: #1d4f91;
+  background: #efe4fb;
+  border: 1px solid #ceb7ec;
+  color: #5d3f8f;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -274,26 +312,28 @@ nav a:hover {
 .pong-section {
   overflow: hidden;
   background:
-    linear-gradient(135deg, rgba(255, 247, 237, 0.96), rgba(255, 255, 255, 0.92)),
-    #ffffff;
-  border: 2px solid #fed7aa;
-  box-shadow: 0 16px 34px rgba(186, 93, 42, 0.12);
+    linear-gradient(135deg, rgba(63, 19, 79, 0.97), rgba(86, 29, 108, 0.94)),
+    #3c144d;
+  border: 2px solid #7d55a7;
+  box-shadow: 0 16px 34px rgba(63, 19, 79, 0.28);
 }
 
 .pong-copy h2 {
   margin: 14px 0 8px;
   font-size: clamp(1.6rem, 3.8vw, 2.3rem);
+  color: #f9efff;
 }
 
 .pong-copy p {
   margin: 0;
   max-width: 62ch;
+  color: #f1e3fa;
 }
 
 .pong-tag {
-  background: #fff7ed;
-  border-color: #fed7aa;
-  color: #9a3412;
+  background: rgba(239, 228, 251, 0.16);
+  border-color: rgba(228, 205, 250, 0.4);
+  color: #f2e7fd;
 }
 
 .pong-link-panel {
@@ -304,13 +344,23 @@ nav a:hover {
   gap: 14px;
   padding: 18px;
   border-radius: 20px;
-  border: 1px solid #f3dfcf;
-  background: linear-gradient(180deg, #fff8f1, #fffdfb);
+  border: 1px solid rgba(228, 205, 250, 0.24);
+  background: linear-gradient(180deg, rgba(33, 8, 42, 0.42), rgba(71, 25, 89, 0.2));
+}
+
+.pong-section .btn-primary {
+  background: #e9d5ff;
+  color: #4b1f5f;
+  box-shadow: 0 10px 24px rgba(20, 4, 29, 0.28);
+}
+
+.pong-section .btn-primary:hover {
+  background: #f3e8ff;
 }
 
 .pong-link-note {
   margin: 0;
-  color: var(--muted);
+  color: #f4e7fc;
   font-size: 0.95rem;
 }
 
@@ -427,8 +477,8 @@ nav a:hover {
 }
 
 .stat-card {
-  background: #f8fafc;
-  border: 1px solid #dce6f1;
+  background: rgba(255, 250, 255, 0.72);
+  border: 1px solid #d8c8ee;
   border-radius: 16px;
   padding: 14px 16px;
 }
