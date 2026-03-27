@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alyssa Maxon | Simon Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="reveal">
+      <div class="brand">Alyssa Maxon</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#how-to-play">How to Play</a>
+        <a href="#game-panel">Game</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero reveal reveal-delay-1 simon-hero">
+        <h1>Simon Memory Challenge</h1>
+        <p>
+          Watch the color pattern, repeat it exactly, and see how long you can keep
+          the streak going.
+        </p>
+        <div class="buttons">
+          <button class="btn btn-primary" id="simon-start-btn">Start Game</button>
+          <a class="btn-link" href="index.html">Back Home</a>
+        </div>
+      </section>
+
+      <section class="grid reveal reveal-delay-2">
+        <article class="card" id="how-to-play">
+          <div class="step">01</div>
+          <h3>Watch</h3>
+          <p>Press Start and follow the flashing color sequence.</p>
+        </article>
+        <article class="card">
+          <div class="step">02</div>
+          <h3>Repeat</h3>
+          <p>Click the pads in the same order after the sequence finishes.</p>
+        </article>
+        <article class="card">
+          <div class="step">03</div>
+          <h3>Advance</h3>
+          <p>Each round adds one more color. A mistake resets the game.</p>
+        </article>
+      </section>
+
+      <section class="section reveal reveal-delay-3 simon-layout" id="game-panel">
+        <div class="simon-board-wrap">
+          <div class="simon-board" aria-label="Simon game board">
+            <button class="pad pad-green" data-color="green" aria-label="Green"></button>
+            <button class="pad pad-red" data-color="red" aria-label="Red"></button>
+            <button class="pad pad-yellow" data-color="yellow" aria-label="Yellow"></button>
+            <button class="pad pad-blue" data-color="blue" aria-label="Blue"></button>
+            <div class="simon-center">
+              <div class="simon-title">SIMON</div>
+              <div class="simon-round">Round <span id="round-display">0</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="simon-panel">
+          <h2>Play the Sequence</h2>
+          <p>
+            The game becomes active after you start a round. Wait for the demo,
+            then repeat the exact pattern.
+          </p>
+          <div class="simon-stats">
+            <div class="stat-card">
+              <span class="stat-label">Current Round</span>
+              <strong id="round-card">0</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Best Round</span>
+              <strong id="best-score">0</strong>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-primary" id="simon-restart-btn">Restart</button>
+          </div>
+          <div class="status simon-status" id="simon-status" aria-live="polite">
+            Status: Press Start Game to begin.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="reveal reveal-delay-3">Practice the pattern and beat your best round.</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
