@@ -271,6 +271,49 @@ nav a:hover {
   text-transform: uppercase;
 }
 
+.pong-section {
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 247, 237, 0.96), rgba(255, 255, 255, 0.92)),
+    #ffffff;
+  border: 2px solid #fed7aa;
+  box-shadow: 0 16px 34px rgba(186, 93, 42, 0.12);
+}
+
+.pong-copy h2 {
+  margin: 14px 0 8px;
+  font-size: clamp(1.6rem, 3.8vw, 2.3rem);
+}
+
+.pong-copy p {
+  margin: 0;
+  max-width: 62ch;
+}
+
+.pong-tag {
+  background: #fff7ed;
+  border-color: #fed7aa;
+  color: #9a3412;
+}
+
+.pong-link-panel {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 20px;
+  border: 1px solid #f3dfcf;
+  background: linear-gradient(180deg, #fff8f1, #fffdfb);
+}
+
+.pong-link-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .simon-section-header h2 {
   margin: 14px 0 8px;
   font-size: clamp(1.6rem, 3.8vw, 2.3rem);
@@ -478,6 +521,11 @@ footer {
   .game-link-panel {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .pong-link-panel {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .simon-board {
